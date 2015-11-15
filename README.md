@@ -1,6 +1,6 @@
 # Gemius
 
-Parses your Gemfile.lock file and lists all dependencies
+Parses your Gemfile.lock file and lists all dependencies.
 
 ## Installation
 

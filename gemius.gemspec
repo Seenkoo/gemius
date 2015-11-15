@@ -6,12 +6,11 @@ require 'gemius/version'
 Gem::Specification.new do |spec|
   spec.name          = "gemius"
   spec.version       = Gemius::VERSION
-  spec.authors       = ["TODO: Write your name"]
+  spec.authors       = ["Konstantin Lazarev"]
   spec.email         = ["le6oww5k1@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Parses your Gemfile.lock file and lists all dependencies.}
+  spec.homepage      = "https://github.com/Le6ow5k1/gemius"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
