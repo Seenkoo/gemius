@@ -21,13 +21,10 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-  gemfile_lock = Gemius.gemfile_lock('path to Gemfile.lock')
+  gemfile_lock = Gemius.gemfile_lock('path to Gemfile.lock or its contents')
 
-  gemfile_lock.specs.first.name
-  => "aws-s3"
-
-  gemfile_lock.specs.first.version
-  => "0.6.3"
+  gemfile_lock.specs.first
+   => #<struct Gemius::GemfileLock::Spec name="aws-s3", version="0.6.3", remote="git://github.com/JeremyGeros/aws-s3.git", revision="bdf58c51f55bb16a7f2a83f01c34976333cc5f4c">
 ```
 
 ## Development
