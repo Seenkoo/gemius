@@ -22,16 +22,15 @@ GIT
         GEMFILE
       end
 
-      it { expect(specs.size).to eq(2) }
-
       it do
-        expect(specs[0].name).to eq 'big_sitemap'
-        expect(specs[0].version).to eq '1.0.1'
-      end
-
-      it do
-        expect(specs[1].name).to eq 'postgresql_cursor'
-        expect(specs[1].version).to eq '0.5.1'
+        expect(specs).to contain_exactly({name: 'big_sitemap',
+                                          version: "1.0.1",
+                                          remote: "git://github.com/abak-press/big_sitemap.git",
+                                          revision: "9b061f833510c4de41e1d53b7d5f4504d47900b8"},
+                                         {name: 'postgresql_cursor',
+                                          version: "0.5.1",
+                                          remote: "git://github.com/abak-press/postgresql_cursor.git",
+                                          revision: "31f503975063aeffdc3573f8dd3695a3ab1e1bc3"})
       end
     end
 
@@ -49,16 +48,10 @@ GEM
         GEMFILE
       end
 
-      it { expect(specs.size).to eq(3) }
-
       it do
-        expect(specs[0].name).to eq 'aasm'
-        expect(specs[0].version).to eq '3.1.1'
-      end
-
-      it do
-        expect(specs[1].name).to eq 'actionmailer'
-        expect(specs[1].version).to eq '3.1.12'
+        expect(specs).to contain_exactly({name: 'aasm', version: "3.1.1", remote: "https://rubygems.org/"},
+                                         {name: 'actionmailer', version: "3.1.12", remote: "https://rubygems.org/"},
+                                         {name: 'actionpack', version: "3.1.12", remote: "https://rubygems.org/"})
       end
     end
   end

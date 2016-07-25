@@ -24,18 +24,12 @@ Or install it yourself as:
   gemfile_lock = Gemius.gemfile_lock('path to Gemfile.lock or its contents')
 
   spec = gemfile_lock.specs.first
-
-  spec.name
-  => "aws-s3"
-
-  spec.version
-  => "0.6.3"
-
-  spec.remote
-  => "git://github.com/JeremyGeros/aws-s3.git"
-
-  spec.revision
-  => "bdf58c51f55bb16a7f2a83f01c34976333cc5f4c"
+  => {
+    name: "aws-s3",
+    version: "0.6.3",
+    remote: "git://github.com/JeremyGeros/aws-s3.git",
+    revision: "bdf58c51f55bb16a7f2a83f01c34976333cc5f4c"
+  }
 ```
 
 ## Development
@@ -47,4 +41,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/gemius.
-
