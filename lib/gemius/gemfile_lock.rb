@@ -1,7 +1,7 @@
 module Gemius
   class GemfileLock
     SPECS_SECTION_RE = /(?:\s{4}((?:\w|-|\.)+)\s\(((?:\w|\.)+)\))+\n?/
-    GIT_SECTION_RE = /\s{2}remote:\s(.+)\n\s{2}revision:\s(.+)\n(?:\s{2}ref:\s(.+))?\n?(?:\s{2}branch:\s(.+))?/
+    GIT_SECTION_RE = /\s{2}remote:\s(.+)\n\s{2}revision:\s(.+)\n(?:\s{2}ref:\s(.+))?\n?(?:\s{2}branch:\s(.+))?\n?(?:\s{2}tag:\s(.+))?/
     REMOTE_RE = /\s{2}remote:\s(.+)/
 
     def initialize(file_content)
@@ -27,10 +27,11 @@ module Gemius
     end
 
     def parse_git_section(section)
-      _, remote, revision, ref, branch = section.match(GIT_SECTION_RE).to_a
+      _, remote, revision, ref, branch, tag = section.match(GIT_SECTION_RE).to_a
       additional_props = {remote: remote, revision: revision}
       additional_props[:ref] = ref if ref
       additional_props[:branch] = branch if branch
+      additional_props[:tag] = tag if tag
 
       parse_specs_section(section, additional_props)
     end

@@ -15,7 +15,8 @@ GIT
 
 GIT
   remote: git://github.com/abak-press/postgresql_cursor.git
-  revision: 31f503975063aeffdc3573f8dd3695a3ab1e1bc3
+  revision: 261075ed26d830cf3d960d7a447c3badbaa68734
+  tag: v0.5.1
   specs:
     postgresql_cursor (0.5.1)
       activerecord (>= 3.1.0)
@@ -30,7 +31,8 @@ GIT
                                          {name: 'postgresql_cursor',
                                           version: "0.5.1",
                                           remote: "git://github.com/abak-press/postgresql_cursor.git",
-                                          revision: "31f503975063aeffdc3573f8dd3695a3ab1e1bc3"})
+                                          revision: "261075ed26d830cf3d960d7a447c3badbaa68734",
+                                          tag: "v0.5.1"})
       end
     end
 
